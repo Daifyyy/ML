@@ -1,0 +1,30 @@
+# Default leagues/seasons; override via CLI if you want
+leagues: [39, 140, 61, 78, 135]   # EPL, LaLiga, Ligue 1, Bundesliga, Serie A
+seasons: [2022, 2023, 2024]       # adjust as needed
+
+# Storage paths
+data_dir: "data"
+parquet_dir: "data/parquet"
+sqlite_path: "data/db.sqlite"
+
+# API base (do not change unless API-Football changes host)
+api_base: "https://v3.football.api-sports.io"
+
+# Concurrency: API-Football is rate-limited; we keep it simple/serial +
+# automatic backoff. (You can raise if you have a higher plan.)
+max_requests_per_minute: 55
+
+# Safety: min sleep between calls (ms)
+min_ms_between_calls: 100
+
+# Endpoints to include in snapshot:
+include:
+  fixtures_finished: true
+  fixtures_scheduled: true
+  standings: true
+  team_statistics: true
+  injuries: true
+  h2h: true
+
+# H2H last N
+h2h_last: 10
