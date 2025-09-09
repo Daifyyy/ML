@@ -3,7 +3,7 @@ from typing import Dict, Any, List, Iterable
 from dataclasses import dataclass
 import json
 import pandas as pd
-from client import APIFootballClient
+from .client import APIFootballClient
 
 @dataclass
 class FixtureCore:

@@ -1,7 +1,7 @@
 from __future__ import annotations
 import argparse
-from config import AppConfig
-from service import DataService
+from .config import AppConfig
+from .service import DataService
 
 def parse_args():
     p = argparse.ArgumentParser(description="API-Football data acquisition to Parquet/SQLite (offline).")

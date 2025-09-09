@@ -4,10 +4,10 @@ from datetime import datetime, timedelta
 from tqdm import tqdm
 import pandas as pd
 
-from config import AppConfig, get_api_key
-from client import APIFootballClient
-from storage import ParquetStore, SQLiteStore
-from fetchers import FixturesFetcher, StandingsFetcher, TeamStatsFetcher, InjuriesFetcher, H2HFetcher
+from .config import AppConfig, get_api_key
+from .client import APIFootballClient
+from .storage import ParquetStore, SQLiteStore
+from .fetchers import FixturesFetcher, StandingsFetcher, TeamStatsFetcher, InjuriesFetcher, H2HFetcher
 
 class DataService:
     """

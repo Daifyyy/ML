@@ -1,0 +1,28 @@
+# Leagues and seasons to fetch
+# Premier League=39, La Liga=140, Ligue 1=61, Bundesliga=78, Serie A=135
+leagues: [39]        # start with EPL only to test
+seasons: [2024]      # current season
+
+# Storage paths
+data_dir: "data"
+parquet_dir: "data/parquet"
+sqlite_path: "data/db.sqlite"
+
+# API base URL
+api_base: "https://v3.football.api-sports.io"
+
+# Rate limits / throttling
+max_requests_per_minute: 55
+min_ms_between_calls: 100
+
+# Which endpoints to fetch
+include:
+  fixtures_finished: true
+  fixtures_scheduled: true
+  standings: true
+  team_statistics: true
+  injuries: true
+  h2h: false     # set to true later if you want full head-to-head data (lots of calls!)
+
+# Head-to-head settings
+h2h_last: 10
